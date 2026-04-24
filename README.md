@@ -1,19 +1,13 @@
-# Вертикаль
+# Вертикаль / Vertical
 
-**Вертикаль** — мобильный коммерческий терминал для строительных мастеров, бригад и компаний: заявка, замер, честная цена, защищённая смета, документы и внутренняя экономика.
-
-Главная формула продукта:
-
-```text
-Заявка → Замер → Быстрая цена → Точная смета → КП → Договор → Работы → Акт → Оплата
-```
+**Вертикаль** — мобильный коммерческий терминал для строительных мастеров, бригад и компаний: заявка, замер, честная цена, защищённая смета, документы, клиентская ссылка и внутренняя экономика.
 
 Первый продуктовый модуль: **механизированная штукатурка**.
 
 ## Принцип
 
-- AI помогает разобрать текст, подсказать риски и сформировать понятное объяснение клиенту.
-- Финальные деньги считает deterministic engine.
+- AI помогает заполнить и объяснить, разобрать текст и подсказать риски.
+- Финальные деньги считает deterministic C23 core.
 - C23 core является судейским расчётным контуром.
 - UI, API, документы и AI orchestration написаны на TypeScript.
 - Клиентская цена и внутренняя экономика разделены.
@@ -25,12 +19,18 @@ apps/web              React/Vite PWA dashboard
 apps/api              Fastify API
 packages/core-c       C23 calculation core
 packages/core-ts      TypeScript adapter/fallback
-packages/verticals    vertical modules, first: plastering
+packages/verticals    Vertical modules, first: plastering
 packages/types        shared domain types
 packages/ui           shared UI placeholder
 packages/ai           AI orchestration placeholder
 packages/documents    export/document placeholder
 docs/                 product and engineering docs
+```
+
+## Продуктовая формула
+
+```text
+Заявка → Замер → Быстрая цена → Защищённая смета → КП → Договор → Работы → Акт → Оплата
 ```
 
 ## Быстрый старт
@@ -50,6 +50,13 @@ API:
 
 ```bash
 pnpm --filter @vertical/api dev
+```
+
+Для проверки и сборки:
+
+```bash
+pnpm build
+pnpm test
 ```
 
 C23 core:
@@ -86,3 +93,25 @@ pnpm build
 ```text
 Смета без споров: антидоп-проверка, условия выполнения, клиентская цена, внутренняя маржа и документы из одного сценария.
 ```
+=======
+## MVP Scope
+
+Входит:
+
+- штукатурный расчёт;
+- материалы и мешки;
+- работа;
+- подъём и логистика;
+- антидоп score;
+- внутренняя экономика;
+- PWA shell;
+- docs-first архитектура.
+
+Не входит в MVP:
+
+- все вертикали;
+- собственная LLM;
+- бухгалтерия;
+- Telegram;
+- ERP.
+>>>>>>> dbd821d (feat: bootstrap Vertical with C23 plastering core)
