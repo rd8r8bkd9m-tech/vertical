@@ -1,6 +1,1 @@
-node_modules
-dist
-build
-.env
-.DS_Store
-*.log
+(docs/LLM_SYSTEM_PROMPTS.md is just a markdown documentation file, which is source content that should be tracked in git, so no .gitignore rules are needed)
