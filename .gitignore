@@ -1,6 +1,33 @@
-node_modules
-dist
-build
-.env
-.DS_Store
+```
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+*.js.map
+*.ts.map
+
+# Development tools
+.vite/
+
+# Environment variables
+.env*
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
 *.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Package manager
+pnpm-lock.yaml
+```
